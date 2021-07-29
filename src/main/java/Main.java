@@ -1,3 +1,7 @@
+import Contacts.Contact;
+import Contacts.ContactsList;
+import MenuActions.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,7 +16,6 @@ public class Main {
         items.add(new ReadAllContactsMenuAction());
         items.add(new RemoveContactsMenuAction());
         items.add(new FindContactMenuAction());
-
 
         Menu menu = new Menu(sc, items, contactsLists);
         menu.run();

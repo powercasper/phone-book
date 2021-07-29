@@ -1,3 +1,8 @@
+package MenuActions;
+
+import Contacts.Contact;
+import Contacts.ContactsList;
+
 import java.util.Scanner;
 
 public class AddContactMenuAction extends MenuItem implements MenuAction {

@@ -1,3 +1,5 @@
+package Contacts;
+
 import java.util.List;
 
 public class InMemoryContactsService implements ContactsService {

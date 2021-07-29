@@ -1,3 +1,7 @@
+package MenuActions;
+
+import Contacts.ContactsList;
+
 import java.util.Scanner;
 
 public class RemoveContactsMenuAction extends MenuItem implements MenuAction {

@@ -1,3 +1,7 @@
+package MenuActions;
+
+import Contacts.ContactsList;
+
 import java.util.List;
 import java.util.Scanner;
 

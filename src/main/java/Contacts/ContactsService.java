@@ -1,3 +1,5 @@
+package Contacts;
+
 import java.util.List;
 
 interface ContactsService {
