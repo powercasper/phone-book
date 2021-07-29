@@ -4,9 +4,15 @@ import Contacts.ContactsList;
 
 import java.util.Scanner;
 
-public class RemoveContactsMenuAction extends MenuItem implements MenuAction {
+public class RemoveContactsMenuAction implements MenuAction {
+    public Scanner sc;
+    public ContactsList list;
+    public RemoveContactsMenuAction(Scanner sc, ContactsList list) {
+        this.sc = sc;
+        this.list = list;
+    }
     @Override
-    public void doAction(Scanner sc, ContactsList list, String nameBeginning) {
+    public void doAction() {
         System.out.println("Available to remove -> [");
         for (int i = 0; i < list.getAll().size(); i++) {
             String name = list.get(i).getName();

@@ -7,9 +7,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class FindContactMenuAction extends MenuItem implements MenuAction {
+public class FindContactMenuAction implements MenuAction {
+    public Scanner sc;
+    public ContactsList list;
+    public FindContactMenuAction(Scanner sc, ContactsList list) {
+        this.sc = sc;
+        this.list = list;
+    }
     @Override
-    public void doAction(Scanner sc, ContactsList list, String nameBeginning) {
+    public void doAction() {
         System.out.println("Enter Name Beginning:");
         String nb = sc.nextLine();
         System.out.printf("Search Query: -> %s \n", nb);
@@ -25,7 +31,7 @@ public class FindContactMenuAction extends MenuItem implements MenuAction {
             System.out.println("Do you want to try Again? yes/no\n");
             String nbNew = sc.nextLine();
             if ("yes".equals(nbNew)) {
-                this.doAction(sc, list, nameBeginning);
+                this.doAction();
             } else { System.out.println("No selected\n. BYE BYE!"); }
         }
         System.out.printf("found %s matches [\n", foundNames.size());

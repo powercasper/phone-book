@@ -30,20 +30,20 @@ public class Menu {
         sc.nextLine();
         switch (ch) {
             case 1:
-                AddContactMenuAction addContactMenuAction = new AddContactMenuAction();
-                addContactMenuAction.doAction(sc, contactsLists, "");
+                AddContactMenuAction addContactMenuAction = new AddContactMenuAction(sc, contactsLists);
+                addContactMenuAction.doAction();
                 break;
             case 2:
-                ReadAllContactsMenuAction readAllContactsMenuAction = new ReadAllContactsMenuAction();
-                readAllContactsMenuAction.doAction(sc, contactsLists, "");
+                ReadAllContactsMenuAction readAllContactsMenuAction = new ReadAllContactsMenuAction(sc, contactsLists);
+                readAllContactsMenuAction.doAction();
                 break;
             case 3:
-                RemoveContactsMenuAction removeContactsMenuAction = new RemoveContactsMenuAction();
-                removeContactsMenuAction.doAction(sc, contactsLists, "");
+                RemoveContactsMenuAction removeContactsMenuAction = new RemoveContactsMenuAction(sc, contactsLists);
+                removeContactsMenuAction.doAction();
                 break;
             case 4:
-                FindContactMenuAction findContact = new FindContactMenuAction();
-                findContact.doAction(sc, contactsLists, "");
+                FindContactMenuAction findContact = new FindContactMenuAction(sc, contactsLists);
+                findContact.doAction();
                 break;
             case 5:
                 break;

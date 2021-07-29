@@ -5,9 +5,15 @@ import Contacts.ContactsList;
 
 import java.util.Scanner;
 
-public class ReadAllContactsMenuAction extends MenuItem implements MenuAction {
+public class ReadAllContactsMenuAction implements MenuAction {
+    public Scanner sc;
+    private ContactsList list;
+    public ReadAllContactsMenuAction(Scanner sc, ContactsList list) {
+        this.sc = sc;
+        this.list = list;
+    }
     @Override
-    public void doAction(Scanner sc, ContactsList list, String nameBeginning) {
+    public void doAction() {
         System.out.printf("found %s contacts [\n", list.size());
         for (Contact item : list.getAll()) {
             System.out.printf("%s,\n", item.getName());

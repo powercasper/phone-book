@@ -1,11 +1,7 @@
 package MenuActions;
 
-import Contacts.ContactsList;
-
-import java.util.Scanner;
-
 public interface MenuAction {
-    void doAction(Scanner sc, ContactsList list, String nameBeginning);
+    void doAction();
     String getName();
     boolean closeAfter();
 }
