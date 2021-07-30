@@ -29,5 +29,6 @@ public abstract class InMemoryContactsService implements ContactsService {
         for (String foundName : foundNames) {
             System.out.printf("%s,\n", foundName);
         }
+        System.out.println("]\n");
     }
 }
