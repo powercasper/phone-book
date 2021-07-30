@@ -14,11 +14,7 @@ public class RemoveContactsMenuAction implements MenuAction {
     @Override
     public void doAction() {
         System.out.println("Available to remove -> [");
-        for (int i = 0; i < list.getAll().size(); i++) {
-            String name = list.get(i).getName();
-            String phoneNumber = list.get(i).getPhone();
-            System.out.printf("i -> %d, name: %s, phoneNumber: %s \n", i+1, name, phoneNumber);
-        }
+        list.printAll();
         System.out.println("]\n");
         System.out.println("Provide number i: ->");
         int select = sc.nextInt();
