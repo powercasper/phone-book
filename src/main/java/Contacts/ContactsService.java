@@ -1,7 +1,6 @@
 package Contacts;
 
 import java.util.List;
-import java.util.Scanner;
 
 interface ContactsService {
     List<Contact> getAll();

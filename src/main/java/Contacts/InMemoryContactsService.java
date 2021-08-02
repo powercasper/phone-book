@@ -2,7 +2,6 @@ package Contacts;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public abstract class InMemoryContactsService implements ContactsService {
     private final List<Contact> contacts;
