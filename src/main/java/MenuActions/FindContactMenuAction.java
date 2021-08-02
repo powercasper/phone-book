@@ -15,7 +15,7 @@ public class FindContactMenuAction implements MenuAction {
         System.out.println("Enter Name Beginning:");
         String nb = sc.nextLine();
         System.out.printf("Search Query: -> %s \n", nb);
-        list.find(sc, nb);
+        list.find(nb);
     }
     @Override
     public String getName() {

@@ -11,5 +11,5 @@ interface ContactsService {
     void setContact(int index, Contact contact);
     int size();
     void printAll();
-    void find(Scanner sc, String searchQuery);
+    void find(String searchQuery);
 }

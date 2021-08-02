@@ -17,7 +17,7 @@ public abstract class InMemoryContactsService implements ContactsService {
         }
     }
 
-    public void find(Scanner sc, String searchQuery) {
+    public void find(String searchQuery) {
         List<String> foundNames = new ArrayList<String>();
         for (Contact contact : contacts) {
             String contactName = contact.getName();
