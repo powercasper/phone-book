@@ -25,31 +25,10 @@ public class Menu {
     }
 
     private int getChoice() {
-        System.out.println("Enter you choice");
-        int ch = sc.nextInt();
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
         sc.nextLine();
-        switch (ch) {
-            case 1:
-                AddContactMenuAction addContactMenuAction = new AddContactMenuAction(sc, contactsLists);
-                addContactMenuAction.doAction();
-                break;
-            case 2:
-                ReadAllContactsMenuAction readAllContactsMenuAction = new ReadAllContactsMenuAction(sc, contactsLists);
-                readAllContactsMenuAction.doAction();
-                break;
-            case 3:
-                RemoveContactsMenuAction removeContactsMenuAction = new RemoveContactsMenuAction(sc, contactsLists);
-                removeContactsMenuAction.doAction();
-                break;
-            case 4:
-                FindContactMenuAction findContact = new FindContactMenuAction(sc, contactsLists);
-                findContact.doAction();
-                break;
-            case 5:
-                break;
-            default: System.out.println("Enter valid number");
-        }
-        return ch - 1;
+        return choice - 1;
     }
 
     public void run() {
@@ -61,6 +40,7 @@ public class Menu {
                 continue;
             }
             if (ch == actions.size()) break;
+            actions.get(ch).doAction();
         }
     }
 }
